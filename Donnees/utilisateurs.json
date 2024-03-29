@@ -1,0 +1,14 @@
+[
+    {
+        "identifiant": "admin",
+        "mot_de_passe": "admin",
+        "profil": "gestionnaire",
+        "id": "user_63fa15a7a95c0"
+    },
+    {
+        "identifiant": "simple",
+        "mot_de_passe": "simple",
+        "profil": "simple",
+        "id": "user_63fa92e49d5d6"
+    }
+]

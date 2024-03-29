@@ -1,0 +1,77 @@
+[
+    {
+        "type": "Sweat",
+        "nom": "Mickey",
+        "prix": "18"
+    },
+    {
+        "type": "Sweat",
+        "nom": "Stitch",
+        "prix": "20"
+    },
+    {
+        "type": "Robe",
+        "nom": "Coktail",
+        "prix": "30"
+    },
+    {
+        "type": "Sweat",
+        "nom": "Fila",
+        "prix": "143"
+    },
+    {
+        "type": "Chemisier",
+        "nom": "Fleurs",
+        "prix": "25"
+    },
+    {
+        "type": "Jupe",
+        "nom": "Crayon",
+        "prix": "15"
+    },
+    {
+        "type": "Tee Shirt",
+        "nom": "Papillon",
+        "prix": "12"
+    },
+    {
+        "type": "Sweat",
+        "nom": "Disney",
+        "prix": "18"
+    },
+    {
+        "type": "Sweat",
+        "nom": "Le Roi Lion",
+        "prix": "18"
+    },
+    {
+        "type": "Sweat",
+        "nom": "Bambi",
+        "prix": "18"
+    },
+    {
+        "type": "Tee Shirt",
+        "nom": "Le Roi Lion",
+        "prix": "15"
+    },
+    {
+        "type": "Chemisier",
+        "nom": "Rose",
+        "prix": "23"
+    },
+    {
+        "type": "Sweat Polaire",
+        "nom": "Minnie",
+        "prix": "30"
+    },
+    {
+        "type": "Sweat",
+        "nom": "Avatar",
+        "prix": "40"
+    },
+    {
+        "type": "Debardeur",
+        "nom": "B&W",
+        "prix": "15"
+    }
+]

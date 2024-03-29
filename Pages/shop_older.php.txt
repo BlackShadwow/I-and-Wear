@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I & Wear - Shop</title>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+  <link rel="shortcut icon" href="" type="img/logo.png">
+  <link rel="stylesheet" href="/css/index.css">
+
+<title>Menu déroulant</title>
+  
+</head>
+
+<body>
+<?php 
+include "../Scripts/authentification_process.php";
+
+$cookie_result = request($_COOKIE["user_id"]);
+
+if ($cookie_result[0] == False) {
+  echo '<a href="../login.php" class="login_button">Se connecter</a>';
+  echo '<h1 class="title">Bienvenue sur <span class="souligne"><i> I & Wear</i></span></h1>';
+} else {
+  echo "<h1 class=\"title\"></h1>";
+  echo "
+  <div class=\"button-container\">
+    <a href=\"./profil.php\" class=\"profil_button\">
+      <p>@$cookie_result[2]</p>
+    </a>
+  </div>
+  ";
+  if ($cookie_result[1] == True) {
+    echo '<a href="add.php" class="add_button">Ajouter un article</a>';
+  } 
+}
+?> 
+
+  <!--<div class="indisponible">
+    <h1 class="title">Bienvenue sur <span class="souligne"><i> I & Wear</i></span></h1>
+  </div>-->
+
+  
+<div class="recherche_input">
+  <input type="text" placeholder="Vous cherchez un produit ?" name="text" class="input">
+</div>
+  
+<script>
+ const searchButton = document.querySelector('.input');
+      searchButton.addEventListener('keyup', search);
+
+      function search() {
+        const searchInput = document.querySelector('.input');
+        const searchTerm = searchInput.value.toLowerCase();
+        const divs = document.querySelectorAll('.card');
+        for (const div of divs) {
+          const name = div.querySelector('.nom_produit').textContent.toLowerCase();
+          if (name.includes(searchTerm)) {
+            div.style.display = 'block';
+          } else {
+            div.style.display = 'none';
+          }
+        }
+      }
+</script>
+  
+
+<!-- Menu déroulant -->
+	<div class="dropdown">
+		<button>Menu</button>
+		<div class="dropdown-content">
+			<a href="#">Lien 1</a>
+			<a href="#">Lien 2</a>
+			<a href="#">Lien 3</a>
+		</div>
+	</div>
+
+  <div class="div_produits">
+  <?php
+  include "../Scripts/generate_html.php";
+  create_shop()
+  ?>
+  </div>
+</body>
+
+</html>
